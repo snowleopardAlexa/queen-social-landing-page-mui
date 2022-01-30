@@ -1,5 +1,5 @@
 import { makeStyles, AppBar, Toolbar, Typography, InputBase, alpha } from "@material-ui/core";
-import { Search } from "@material-ui/icons";
+import { Search, Mail, Notifications } from "@material-ui/icons";
 
 const useStyles = makeStyles((theme) => ({
   toolbar: {
@@ -40,7 +40,7 @@ function Navbar() {
 
   return (
     <AppBar>
-        <Toolbar className={classes.toolbar}>
+        <Toolbar color="secondary" className={classes.toolbar}>
             <Typography variant="h6" className={classes.logoLg}>
                Social Landing Page
             </Typography>
@@ -54,7 +54,14 @@ function Navbar() {
                   className={classes.input}
                 />
             </div>
-
+            <div className={classes.icons}>
+                <Badge badgeContent={4} color="secondary">
+                    <Mail />
+                </Badge>
+                <Badge badgeContent={2} color="secondary">
+                    <Notifications />
+                </Badge>
+            </div>
         </Toolbar>
     </AppBar>
   );
