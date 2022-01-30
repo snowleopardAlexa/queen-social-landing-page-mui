@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { makeStyles, Fab, Tooltip, Modal, Container } from "@material-ui/core";
+import { makeStyles, Fab, Tooltip, Modal, Container, TextField } from "@material-ui/core";
 import { Add as AddIcon } from "@material-ui/icons";
 
 const useStyles = makeStyles((theme) => ({
@@ -43,7 +43,11 @@ function Add() {
       </Tooltip>
       <Modal open={open}>
           <Container className={classes.container}>
-              Modal
+              <form className={classes.form} autoComplete="off">
+                 <div className={classes.item}>
+                     <TextField id="standard-basic" label="Title" size="small" />
+                 </div>
+              </form>
           </Container>
       </Modal>
     </>
