@@ -8,7 +8,11 @@ const useStyles = makeStyles((theme) => ({
   item: {
     display: "flex",
     alignItems: "center",
-    magrinBottom: theme.spacing(4)
+    marginBottom: theme.spacing(4),
+    [theme.breakpoints.up("sm")]: {
+      marginBottom: theme.spacing(3),
+      cursor: "Pointer",
+    }
   }
 }));
 
