@@ -11,11 +11,16 @@ const useStyles = makeStyles((theme) => ({
 
 function Add() {
 
-  const classes = useStyles()
+  const classes = useStyles();
+
+  const [open, setOpen] = useState(false);
 
   return (
     <>
-      <Tooltip title="Add" aria-label="add">
+      <Tooltip 
+        title="Add" 
+        aria-label="add" 
+        onClick={() => setOpen(true)}>
           <Fab color="secondary" className={classes.fab}>
               <AddIcon />
           </Fab>
