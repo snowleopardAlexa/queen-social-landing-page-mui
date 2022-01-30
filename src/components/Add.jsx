@@ -18,7 +18,11 @@ const useStyles = makeStyles((theme) => ({
         left: 0,
         right: 0,
         margin: "auto",
-    }
+        [theme.breakpoints.down("sm")]: {
+            width: "100vw",
+            height: "100vh",
+        },
+    },
 }));
 
 function Add() {
