@@ -12,8 +12,10 @@ import {
   RadioGroup,
   Button,
   Radio,
+  Snackbar,
 } from "@material-ui/core";
 import { Add as AddIcon } from "@material-ui/icons";
+import MuiAlert from "@material-ui/lab/Alert";
 
 const useStyles = makeStyles((theme) => ({
   fab: {
@@ -48,6 +50,19 @@ function Add() {
   const classes = useStyles();
 
   const [open, setOpen] = useState(false);
+  const [openAlert, setOpenAlert] = useState(false);
+
+  const handleClose = (event, reason) => {
+    if (reason === "clickaway") {
+      return;
+    }
+
+    setOpenAlert(false);
+  };
+
+  function Alert(props) {
+    return <MuiAlert elevation={6} variant="filled" {...props} />;
+  }
 
   return (
     <>
@@ -125,7 +140,7 @@ function Add() {
                 variant="outlined"
                 color="primary"
                 style={{ marginRight: 20 }}
-                
+                onClick={() => setOpenAlert(true)}
               >
                 Create
               </Button>
@@ -140,6 +155,16 @@ function Add() {
           </form>
         </Container>
       </Modal>
+      <Snackbar
+        open={openAlert}
+        autoHideDuration={4000}
+        onClose={handleClose}
+        anchorOrigin={{ vertical: "bottom", horizontal: "left" }}
+        >
+        <Alert onClose={handleClose} severity="success">
+          This is a success message!
+        </Alert>
+      </Snackbar>
     </>
   );
 }
