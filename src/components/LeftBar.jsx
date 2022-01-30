@@ -4,6 +4,11 @@ import { Home } from "@material-ui/icons";
 const useStyles = makeStyles((theme) => ({
   container: {
     paddingTop: theme.spacing(10),
+  },
+  item: {
+    display: "flex",
+    alignItems: "center",
+    magrinBottom: theme.spacing(4)
   }
 }));
 
