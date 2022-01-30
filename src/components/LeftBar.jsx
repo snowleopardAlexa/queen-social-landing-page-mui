@@ -1,9 +1,30 @@
 import { makeStyles, Container, Typography } from "@material-ui/core";
-import { Home } from "@material-ui/icons";
+import {
+  Bookmark,
+  List,
+  ExitToApp,
+  Home,
+  Person,
+  PhotoCamera,
+  PlayCircleOutline,
+  Settings,
+  Storefront,
+  TabletMac,
+} from "@material-ui/icons";
 
 const useStyles = makeStyles((theme) => ({
   container: {
+    height: "100vh",
+    color: "white",
+    marginLeft: "-10px",
     paddingTop: theme.spacing(10),
+    backgroundColor: theme.palette.success.main,
+  },
+  icon: {
+    marginRight: theme.spacing(1),
+    [theme.breakpoints.up("sm")]: {
+      fontSize: "18px",
+    },
   },
   item: {
     display: "flex",
@@ -11,8 +32,18 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: theme.spacing(4),
     [theme.breakpoints.up("sm")]: {
       marginBottom: theme.spacing(3),
-      cursor: "Pointer",
-    }
+      cursor: "pointer",
+    },
+    [theme.breakpoints.down("sm")]: {
+      marginLeft: "4px",
+      cursor: "pointer",
+    },
+  },
+  text: {
+    fontWeight: 500,
+    [theme.breakpoints.down("sm")]: {
+      display: "none",
+    },
   }
 }));
 
@@ -27,24 +58,40 @@ function LeftBar() {
         <Typography className={classes.text}>Homepage</Typography>
       </div>
       <div className={classes.item}>
-        <Home className={classes.icon} />
-        <Typography className={classes.text}>Homepage</Typography>
+        <Person className={classes.icon} />
+        <Typography className={classes.text}>Friends</Typography>
       </div>
       <div className={classes.item}>
-        <Home className={classes.icon} />
-        <Typography className={classes.text}>Homepage</Typography>
+        <List className={classes.icon} />
+        <Typography className={classes.text}>Lists</Typography>
       </div>
       <div className={classes.item}>
-        <Home className={classes.icon} />
-        <Typography className={classes.text}>Homepage</Typography>
+        <PhotoCamera className={classes.icon} />
+        <Typography className={classes.text}>Camera</Typography>
       </div>
       <div className={classes.item}>
-        <Home className={classes.icon} />
-        <Typography className={classes.text}>Homepage</Typography>
+        <PlayCircleOutline className={classes.icon} />
+        <Typography className={classes.text}>Videos</Typography>
       </div>
       <div className={classes.item}>
-        <Home className={classes.icon} />
-        <Typography className={classes.text}>Homepage</Typography>
+        <TabletMac className={classes.icon} />
+        <Typography className={classes.text}>Apps</Typography>
+      </div>
+      <div className={classes.item}>
+        <Bookmark className={classes.icon} />
+        <Typography className={classes.text}>Collections</Typography>
+      </div>
+      <div className={classes.item}>
+        <Storefront className={classes.icon} />
+        <Typography className={classes.text}>Market Place</Typography>
+      </div>
+      <div className={classes.item}>
+        <Settings className={classes.icon} />
+        <Typography className={classes.text}>Settings</Typography>
+      </div>
+      <div className={classes.item}>
+        <ExitToApp className={classes.icon} />
+        <Typography className={classes.text}>Logout</Typography>
       </div>
     </Container>
   );

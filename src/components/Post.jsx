@@ -1,5 +1,4 @@
 import { makeStyles, Container } from "@material-ui/core";
-import Post from './components/Post';
 
 const useStyles = makeStyles((theme) => ({
   container: {
@@ -7,15 +6,15 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-function Feed() {
+function Post() {
 
   const classes = useStyles()
 
   return (
     <Container className={classes.container}>
-      <Post />
+      Post
     </Container>  
   );
 }
 
-export default Feed;
+export default Post;

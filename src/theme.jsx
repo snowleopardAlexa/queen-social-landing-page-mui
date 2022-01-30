@@ -1,5 +1,5 @@
 import { createTheme } from '@material-ui/core';
-import { pink, teal } from '@material-ui/core/colors';
+import { pink, teal, cyan } from '@material-ui/core/colors';
 
 
 export const theme = createTheme ({
@@ -9,6 +9,9 @@ export const theme = createTheme ({
         },
         secondary: {
             main: teal[700],
+        },
+        success: {
+            main: cyan[600]
         }
     },
 })
