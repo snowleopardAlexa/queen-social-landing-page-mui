@@ -24,14 +24,16 @@ const useStyles = makeStyles((theme) => ({
     paddingTop: theme.spacing(10),
   },
   title: {
-    fontSize: 16,
+    fontSize: 18,
     fontWeight: 500,
     color: "#555",
+    fontFamily: 'Outfit',
   },
   link: {
     marginRight: theme.spacing(2),
     color: "#555",
     fontSize: 16,
+    fontFamily: 'Outfit',
   },
 }));
 
