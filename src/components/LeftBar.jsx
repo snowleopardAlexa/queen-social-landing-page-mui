@@ -19,6 +19,8 @@ const useStyles = makeStyles((theme) => ({
     marginLeft: "-10px",
     paddingTop: theme.spacing(10),
     backgroundColor: theme.palette.success.main,
+    position: "sticky",
+    top: 0,
   },
   icon: {
     marginRight: theme.spacing(1),
