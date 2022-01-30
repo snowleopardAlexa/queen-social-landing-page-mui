@@ -11,8 +11,8 @@ function Navbar() {
   return (
     <AppBar>
         <Toolbar>
-            <Typography variant="h1" component="h2">
-               Heading
+            <Typography variant="h6">
+               Social Landing Page
             </Typography>
         </Toolbar>
     </AppBar>
