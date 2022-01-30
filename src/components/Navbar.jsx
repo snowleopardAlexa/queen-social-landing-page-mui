@@ -18,12 +18,14 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "space-between",
   },
   logoLg: {
+    fontFamily: 'Poppins',
     display: "none",
     [theme.breakpoints.up("sm")]: {
       display: "block",
     },
   },
   logoSm: {
+    fontFamily: 'Poppins',
     display: "block",
     [theme.breakpoints.up("sm")]: {
       display: "none",

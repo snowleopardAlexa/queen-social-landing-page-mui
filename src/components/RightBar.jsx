@@ -22,6 +22,8 @@ import butterflies from ".././img/butterflies.jpeg";
 const useStyles = makeStyles((theme) => ({
   container: {
     paddingTop: theme.spacing(10),
+    position: "sticky",
+    top: 0,
   },
   title: {
     fontSize: 18,
