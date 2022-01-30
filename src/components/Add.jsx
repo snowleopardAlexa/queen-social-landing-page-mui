@@ -11,8 +11,9 @@ import {
   FormControlLabel,
   RadioGroup,
   Button,
+  Radio,
 } from "@material-ui/core";
-import { Add as AddIcon, Radio } from "@material-ui/icons";
+import { Add as AddIcon } from "@material-ui/icons";
 
 const useStyles = makeStyles((theme) => ({
   fab: {
@@ -125,7 +126,7 @@ function Add() {
               <Button
                 variant="outlined"
                 color="secondary"
-               
+                onClick={() => setOpen(false)}
               >
                 Cancel
               </Button>
