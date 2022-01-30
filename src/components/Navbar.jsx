@@ -1,5 +1,6 @@
-import { makeStyles, AppBar, Toolbar, Typography, InputBase, alpha } from "@material-ui/core";
+import { makeStyles, AppBar, Toolbar, Typography, InputBase, alpha, Badge, Avatar } from "@material-ui/core";
 import { Search, Mail, Notifications } from "@material-ui/icons";
+import freddie from '.././img/freddie.jpeg';
 
 const useStyles = makeStyles((theme) => ({
   toolbar: {
@@ -31,6 +32,13 @@ const useStyles = makeStyles((theme) => ({
      input: {
          color: "white",
          marginLeft: theme.spacing(1),
+     },
+     icons: {
+         display: "flex",
+         alignItems: "center"
+     },
+     badge: {
+         marginRight: theme.spacing(2),
      }
 }));
 
@@ -39,8 +47,8 @@ function Navbar() {
   const classes = useStyles()
 
   return (
-    <AppBar>
-        <Toolbar color="secondary" className={classes.toolbar}>
+    <AppBar color="primary">
+        <Toolbar className={classes.toolbar}>
             <Typography variant="h6" className={classes.logoLg}>
                Social Landing Page
             </Typography>
@@ -55,12 +63,13 @@ function Navbar() {
                 />
             </div>
             <div className={classes.icons}>
-                <Badge badgeContent={4} color="secondary">
+                <Badge badgeContent={4} color="secondary" className={classes.badge}>
                     <Mail />
                 </Badge>
-                <Badge badgeContent={2} color="secondary">
+                <Badge badgeContent={2} color="secondary" className={classes.badge}>
                     <Notifications />
                 </Badge>
+                <Avatar alt="Freddie Mercury" src={freddie} />
             </div>
         </Toolbar>
     </AppBar>
