@@ -10,6 +10,7 @@ import {
   FormLabel,
   FormControlLabel,
   RadioGroup,
+  Button,
 } from "@material-ui/core";
 import { Add as AddIcon, Radio } from "@material-ui/icons";
 
@@ -112,6 +113,23 @@ function Add() {
                 />
               </RadioGroup>
             </div>
+            <div className={classes.item}>
+              <Button
+                variant="outlined"
+                color="primary"
+                style={{ marginRight: 20 }}
+                
+              >
+                Create
+              </Button>
+              <Button
+                variant="outlined"
+                color="secondary"
+               
+              >
+                Cancel
+              </Button>
+              </div>
           </form>
         </Container>
       </Modal>
