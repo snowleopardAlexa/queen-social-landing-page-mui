@@ -1,7 +1,9 @@
-import { makeStyles } from "@material-ui/core";
+import { makeStyles, Container } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
-  
+  container: {
+    paddingTop: theme.spacing(10),
+  }
 }));
 
 function Feed() {
@@ -9,9 +11,9 @@ function Feed() {
   const classes = useStyles()
 
   return (
-    <div className="feed">
-       
-    </div>
+    <Container className={classes.container}>
+      Feed
+    </Container>  
   );
 }
 

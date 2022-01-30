@@ -1,7 +1,19 @@
-import { makeStyles } from "@material-ui/core";
+import { makeStyles, Container, Typography } from "@material-ui/core";
+import { Home } from "@material-ui/icons";
 
 const useStyles = makeStyles((theme) => ({
-  
+  container: {
+    paddingTop: theme.spacing(10),
+  },
+  item: {
+    display: "flex",
+    alignItems: "center",
+    marginBottom: theme.spacing(4),
+    [theme.breakpoints.up("sm")]: {
+      marginBottom: theme.spacing(3),
+      cursor: "Pointer",
+    }
+  }
 }));
 
 function LeftBar() {
@@ -9,9 +21,32 @@ function LeftBar() {
   const classes = useStyles()
 
   return (
-    <div className="left-bar">
-       
-    </div>
+    <Container className={classes.container}>
+      <div className={classes.item}>
+        <Home className={classes.icon} />
+        <Typography className={classes.text}>Homepage</Typography>
+      </div>
+      <div className={classes.item}>
+        <Home className={classes.icon} />
+        <Typography className={classes.text}>Homepage</Typography>
+      </div>
+      <div className={classes.item}>
+        <Home className={classes.icon} />
+        <Typography className={classes.text}>Homepage</Typography>
+      </div>
+      <div className={classes.item}>
+        <Home className={classes.icon} />
+        <Typography className={classes.text}>Homepage</Typography>
+      </div>
+      <div className={classes.item}>
+        <Home className={classes.icon} />
+        <Typography className={classes.text}>Homepage</Typography>
+      </div>
+      <div className={classes.item}>
+        <Home className={classes.icon} />
+        <Typography className={classes.text}>Homepage</Typography>
+      </div>
+    </Container>
   );
 }
 

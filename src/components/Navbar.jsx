@@ -73,7 +73,7 @@ function Navbar() {
   const classes = useStyles({ open });
 
   return (
-    <AppBar color="primary">
+    <AppBar color="primary" position="fixed">
       <Toolbar className={classes.toolbar}>
         <Typography variant="h6" className={classes.logoLg}>
           Social Landing Page
