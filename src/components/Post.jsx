@@ -6,13 +6,26 @@ import {
   CardContent,
   CardMedia,
   Typography,
+  CardActions,
+  Button
 } from "@material-ui/core";
-import bohemian from '../.img/bohemian.jpeg'
+import bohemian from '.././img/bohemian.jpeg'
 
 const useStyles = makeStyles((theme) => ({
-  container: {
-    paddingTop: theme.spacing(10),
+  card: {
+      marginBottom: theme.spacing(5),
   },
+  media: {
+      height: 250,
+  },
+  buttonShare: {
+      backgroundColor: '#9c27b0',
+      color: 'white',
+  },
+  buttonLearnMore: {
+    backgroundColor: '#00c853',
+    color: 'white',
+},
 }));
 
 function Post() {
@@ -20,7 +33,7 @@ function Post() {
 
   return (
     <Container className={classes.container}>
-      <Card>
+      <Card className={classes.card}>
         <CardActionArea>
           <CardMedia
             className={classes.media}
@@ -28,8 +41,8 @@ function Post() {
             title="Bohemian Rhapsody is a global success!"
           />
           <CardContent>
-            <Typography variant="h5">My fIRST pOST</Typography>
-            <Typography variant="body">
+            <Typography gutterBottom variant="h5">Bohemian Rhapsody is a global success!</Typography>
+            <Typography variant="body2">
               "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam, quis nostrud exercitation ullamco laboris
@@ -40,6 +53,10 @@ function Post() {
             </Typography>
           </CardContent>
         </CardActionArea>
+        <CardActions>
+            <Button className={classes.buttonShare}>Share</Button>
+            <Button className={classes.buttonLearnMore}>Learn More</Button>
+        </CardActions>
       </Card>
     </Container>
   );
