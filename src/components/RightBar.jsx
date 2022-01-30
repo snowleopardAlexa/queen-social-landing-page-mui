@@ -1,4 +1,8 @@
-import { makeStyles, Container } from "@material-ui/core";
+import { makeStyles, Container, Typography } from "@material-ui/core";
+import { AvatarGroup, Avatar } from "@material-ui/lab";
+import john from ".././img/john.png";
+import brian from ".././img/brian.jpeg";
+import roger from ".././img/roger.png";
 
 const useStyles = makeStyles((theme) => ({
   container: {
@@ -12,7 +16,12 @@ function RightBar() {
 
   return (
   <Container className={classes.container}>
-     Rightbar
+     <Typography>Online Friends</Typography>
+     <AvatarGroup max={4}>
+       <Avatar alt="Brian May" src={brian} />
+       <Avatar alt="John Deacon" src={john} />
+       <Avatar alt="Roger Tayler" src={roger} />
+     </AvatarGroup>
   </Container> 
   );
 }
