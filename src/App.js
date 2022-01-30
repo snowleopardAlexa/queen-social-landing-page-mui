@@ -3,8 +3,7 @@ import { Person } from '@material-ui/icons';
 
 const useStyles = makeStyles((theme) => ({
   button: {
-    color: "white",
-    backgroundColor: theme.palette.primary.main,
+   ...theme.myButton
   }
 }));
 

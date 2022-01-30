@@ -8,4 +8,9 @@ export const theme = createTheme ({
             main: purple[400],
         },
     },
+    myButton: {
+        backgroundColor: "red",
+        color: "white",
+        border: "1px solid black",
+    }
 })
