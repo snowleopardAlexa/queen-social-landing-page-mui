@@ -76,10 +76,10 @@ function Navbar() {
     <AppBar color="primary" position="fixed">
       <Toolbar className={classes.toolbar}>
         <Typography variant="h6" className={classes.logoLg}>
-          Social Landing Page
+          Queen Band
         </Typography>
         <Typography variant="h6" className={classes.logoSm}>
-          SocialP
+          Queen
         </Typography>
         <div className={classes.search}>
           <Search />
