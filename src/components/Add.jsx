@@ -7,8 +7,11 @@ import {
   Container,
   TextField,
   MenuItem,
+  FormLabel,
+  FormControlLabel,
+  RadioGroup,
 } from "@material-ui/core";
-import { Add as AddIcon } from "@material-ui/icons";
+import { Add as AddIcon, Radio } from "@material-ui/icons";
 
 const useStyles = makeStyles((theme) => ({
   fab: {
@@ -82,6 +85,32 @@ function Add() {
                 <MenuItem value="Private">Private</MenuItem>
                 <MenuItem value="Unlisted">Unlisted</MenuItem>
               </TextField>
+            </div>
+            <div className={classes.item}>
+              <FormLabel component="legend">Who can comment?</FormLabel>
+              <RadioGroup>
+                <FormControlLabel
+                  value="Everybody"
+                  control={<Radio size="small" />}
+                  label="Everybody"
+                />
+                <FormControlLabel
+                  value="My Friends"
+                  control={<Radio size="small" />}
+                  label="My Friends"
+                />
+                <FormControlLabel
+                  value="Nobody"
+                  control={<Radio size="small" />}
+                  label="Nobody"
+                />
+                <FormControlLabel
+                  value="Custom"
+                  disabled
+                  control={<Radio size="small" />}
+                  label="Custom (Premium)"
+                />
+              </RadioGroup>
             </div>
           </form>
         </Container>
