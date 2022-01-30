@@ -9,7 +9,7 @@ import {
   Badge,
   Avatar,
 } from "@material-ui/core";
-import { Search, Mail, Notifications } from "@material-ui/icons";
+import { Search, Mail, Notifications, Cancel } from "@material-ui/icons";
 import freddie from ".././img/freddie.jpeg";
 
 const useStyles = makeStyles((theme) => ({
@@ -40,23 +40,29 @@ const useStyles = makeStyles((theme) => ({
     width: "50%",
     [theme.breakpoints.down("sm")]: {
       display: (props) => props.open ? "flex" : "none",
+      width: "63%",
     },
   },
-  input: {
+   input: {
     color: "white",
     marginLeft: theme.spacing(1),
   },
-  searchButton: {
+   cancel: {
+    [theme.breakpoints.up("sm")]: {
+        display: "none",
+    }
+  },
+   searchButton: {
     marginRight: theme.spacing(2),
     [theme.breakpoints.up("sm")]: {
         display: "none",
       },
   },
-  icons: {
+   icons: {
     alignItems: "center",
-    display: (props) => props.open ? "none" : "flex",
+    display: (props) => (props.open ? "none" : "flex"),
   },
-  badge: {
+   badge: {
     marginRight: theme.spacing(2),
   },
 }));
@@ -73,11 +79,12 @@ function Navbar() {
           Social Landing Page
         </Typography>
         <Typography variant="h6" className={classes.logoSm}>
-          Social Page
+          SocialP
         </Typography>
         <div className={classes.search}>
           <Search />
           <InputBase placeholder="Search..." className={classes.input} />
+          <Cancel className={classes.cancel} onClick={() => setOpen(false)} />
         </div>
         <div className={classes.icons}>
           <Search
