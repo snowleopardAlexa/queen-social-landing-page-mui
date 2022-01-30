@@ -50,7 +50,10 @@ const useStyles = makeStyles((theme) => ({
 
 function Navbar() {
 
-  const classes = useStyles()
+  
+  const [open, setOpen] = useState(false);  
+
+  const classes = useStyles({ open })
 
   return (
     <AppBar color="primary">
@@ -69,7 +72,7 @@ function Navbar() {
                 />
             </div>
             <div className={classes.icons}>
-                <Search className={classes.searchButton} />
+                <Search className={classes.searchButton} onClick={() => setOpen(true)}/>
                 <Badge badgeContent={4} color="secondary" className={classes.badge}>
                     <Mail />
                 </Badge>
