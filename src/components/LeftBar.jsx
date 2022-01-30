@@ -34,6 +34,10 @@ const useStyles = makeStyles((theme) => ({
       marginBottom: theme.spacing(3),
       cursor: "pointer",
     },
+    [theme.breakpoints.down("sm")]: {
+      marginLeft: "4px",
+      cursor: "pointer",
+    },
   },
   text: {
     fontWeight: 500,
