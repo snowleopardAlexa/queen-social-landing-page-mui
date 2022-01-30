@@ -42,6 +42,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   text: {
+    fontFamily: 'Outfit',
     fontWeight: 500,
     [theme.breakpoints.down("sm")]: {
       display: "none",

@@ -18,12 +18,14 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "space-between",
   },
   logoLg: {
+    fontFamily: 'Poppins',
     display: "none",
     [theme.breakpoints.up("sm")]: {
       display: "block",
     },
   },
   logoSm: {
+    fontFamily: 'Poppins',
     display: "block",
     [theme.breakpoints.up("sm")]: {
       display: "none",
@@ -76,10 +78,10 @@ function Navbar() {
     <AppBar color="primary" position="fixed">
       <Toolbar className={classes.toolbar}>
         <Typography variant="h6" className={classes.logoLg}>
-          Social Landing Page
+          Queen Band
         </Typography>
         <Typography variant="h6" className={classes.logoSm}>
-          SocialP
+          Queen
         </Typography>
         <div className={classes.search}>
           <Search />
