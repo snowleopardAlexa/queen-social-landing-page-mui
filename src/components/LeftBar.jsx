@@ -4,15 +4,15 @@ const useStyles = makeStyles((theme) => ({
   
 }));
 
-function App() {
+function LeftBar() {
 
   const classes = useStyles()
 
   return (
-    <div className="app">
+    <div className="left-bar">
        
     </div>
   );
 }
 
-export default App;
+export default LeftBar;

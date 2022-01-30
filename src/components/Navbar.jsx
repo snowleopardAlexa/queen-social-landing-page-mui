@@ -4,15 +4,15 @@ const useStyles = makeStyles((theme) => ({
   
 }));
 
-function App() {
+function Navbar() {
 
   const classes = useStyles()
 
   return (
-    <div className="app">
+    <div className="nav">
        
     </div>
   );
 }
 
-export default App;
+export default Navbar;

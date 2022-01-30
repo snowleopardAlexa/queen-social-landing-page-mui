@@ -4,15 +4,15 @@ const useStyles = makeStyles((theme) => ({
   
 }));
 
-function App() {
+function RightBar() {
 
   const classes = useStyles()
 
   return (
-    <div className="app">
+    <div className="right-bar">
        
     </div>
   );
 }
 
-export default App;
+export default RightBar;

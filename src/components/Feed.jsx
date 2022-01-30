@@ -4,15 +4,15 @@ const useStyles = makeStyles((theme) => ({
   
 }));
 
-function App() {
+function Feed() {
 
   const classes = useStyles()
 
   return (
-    <div className="app">
+    <div className="feed">
        
     </div>
   );
 }
 
-export default App;
+export default Feed;
