@@ -1,7 +1,12 @@
 import { makeStyles, Fab, Tooltip } from "@material-ui/core";
+import { Add as AddIcon } from "@material-ui/icons";
 
 const useStyles = makeStyles((theme) => ({
-  
+    fab: {
+        position: "fixed",
+        bottom: 20,
+        right: 20,
+    },
 }));
 
 function Add() {
@@ -11,8 +16,8 @@ function Add() {
   return (
     <>
       <Tooltip title="Add" aria-label="add">
-          <Fab color="secondary" className={classes.absolute}>
-              <Add />
+          <Fab color="secondary" className={classes.fab}>
+              <AddIcon />
           </Fab>
       </Tooltip>
     </>

@@ -30,10 +30,12 @@ const useStyles = makeStyles((theme) => ({
   buttonShare: {
       backgroundColor: '#9c27b0',
       color: 'white',
+      fontFamily: 'Outfit',
   },
   buttonLearnMore: {
     backgroundColor: '#00c853',
     color: 'white',
+    fontFamily: 'Outfit',
 },
 }));
 
