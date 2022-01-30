@@ -28,10 +28,16 @@ const useStyles = makeStyles((theme) => ({
          },
          borderRadius: theme.shape.borderRaius,
          width: "50%", 
+         [theme.breakpoints.down("sm")]: {
+             display: "none",
+         }
      },
      input: {
          color: "white",
          marginLeft: theme.spacing(1),
+     },
+     searchButton: {
+         marginRight: theme.spacing(2),
      },
      icons: {
          display: "flex",
@@ -63,6 +69,7 @@ function Navbar() {
                 />
             </div>
             <div className={classes.icons}>
+                <Search className={classes.searchButton} />
                 <Badge badgeContent={4} color="secondary" className={classes.badge}>
                     <Mail />
                 </Badge>
