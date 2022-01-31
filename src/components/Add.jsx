@@ -77,7 +77,7 @@ import {
                   id="standard-basic"
                   label="Title"
                   size="small"
-                  style={{ width: "100%" }}
+                  style={{ width: "100%", marginTop: "50px" }}
                 />
               </div>
               <div className={classes.item}>

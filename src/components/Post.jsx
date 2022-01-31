@@ -7,7 +7,8 @@ import {
   CardMedia,
   Typography,
   CardActions,
-  Button
+  Button, 
+  Link
 } from "@material-ui/core";
 import bohemian from '.././img/bohemian.jpeg'
 
@@ -37,6 +38,10 @@ const useStyles = makeStyles((theme) => ({
     color: 'white',
     fontFamily: 'Outfit',
 },
+link: {
+   textDecoration: 'none',
+   color: 'black',
+}
 }));
 
 function Post() {
@@ -65,8 +70,8 @@ function Post() {
           </CardContent>
         </CardActionArea>
         <CardActions>
-            <Button className={classes.buttonShare}>Share</Button>
-            <Button className={classes.buttonLearnMore}>Learn More</Button>
+            <Button className={classes.buttonShare}><Link href="#" className={classes.link}>Share</Link></Button>
+            <Button className={classes.buttonLearnMore}><Link href="#" className={classes.link}>Learn More</Link></Button>
         </CardActions>
       </Card>
     </Container>
