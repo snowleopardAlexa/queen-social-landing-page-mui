@@ -7,7 +7,8 @@ import {
   CardMedia,
   Typography,
   CardActions,
-  Button
+  Button, 
+  Link
 } from "@material-ui/core";
 import bohemian from '.././img/bohemian.jpeg'
 
@@ -65,8 +66,8 @@ function Post() {
           </CardContent>
         </CardActionArea>
         <CardActions>
-            <Button className={classes.buttonShare}>Share</Button>
-            <Button className={classes.buttonLearnMore}>Learn More</Button>
+            <Button className={classes.buttonShare}><Link href="#">Share</Link></Button>
+            <Button className={classes.buttonLearnMore}><Link href="#">Learn More</Link></Button>
         </CardActions>
       </Card>
     </Container>
